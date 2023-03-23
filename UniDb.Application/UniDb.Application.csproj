@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="FirebaseAdmin" Version="2.3.0" />
+        <PackageReference Include="FirebaseAuthentication.net" Version="4.0.2" />
+        <PackageReference Include="FluentValidation" Version="11.5.1" />
+        <PackageReference Include="Google.Cloud.Firestore" Version="3.2.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.22.1" />
+        <PackageReference Include="MediatR" Version="12.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.2.23128.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0-preview.2.23128.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.2.23128.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0-preview.2.23128.3" />
+        <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+        <PackageReference Include="protobuf-net" Version="3.2.16" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\UniDb.Domain\UniDb.Domain.csproj" />
+        <ProjectReference Include="..\UniDb.Infrastructure\UniDb.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Mediators\Queries" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.AspNetCore.Http.Results">
+            <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\7.0.3\Microsoft.AspNetCore.Http.Results.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>

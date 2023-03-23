@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "oF5PL0BqOsnHMzTykGfPKagTbChhlqfz36cEb1AcvbY=",
+  "Source": "UniDb.WebApi",
+  "BasePath": "_content/UniDb.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

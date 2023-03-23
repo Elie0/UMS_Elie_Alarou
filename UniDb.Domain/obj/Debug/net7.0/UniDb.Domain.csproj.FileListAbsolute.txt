@@ -1,0 +1,14 @@
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\bin\Debug\net7.0\UniDb.Domain.deps.json
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\bin\Debug\net7.0\UniDb.Domain.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\bin\Debug\net7.0\UniDb.Domain.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.csproj.AssemblyReference.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.AssemblyInfoInputs.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.AssemblyInfo.cs
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.csproj.CoreCompileInputs.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\refint\UniDb.Domain.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\ref\UniDb.Domain.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\bin\Debug\net7.0\UniDb.Domain.runtimeconfig.json
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Domain\obj\Debug\net7.0\UniDb.Domain.genruntimeconfig.cache

@@ -1,0 +1,17 @@
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\bin\Debug\net7.0\UniDb.Persistence.deps.json
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\bin\Debug\net7.0\UniDb.Persistence.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\bin\Debug\net7.0\UniDb.Persistence.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.csproj.AssemblyReference.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.AssemblyInfoInputs.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.AssemblyInfo.cs
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\refint\UniDb.Persistence.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\ref\UniDb.Persistence.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\bin\Debug\net7.0\UniDb.Persistence.runtimeconfig.json
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.genruntimeconfig.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\bin\Debug\net7.0\UniDb.Domain.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\bin\Debug\net7.0\UniDb.Domain.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Persistence\obj\Debug\net7.0\UniDb.Persistence.csproj.CopyComplete
