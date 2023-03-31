@@ -1,33 +1,54 @@
 using System.Reflection;
+using System.Text.Json;
 using System.Text.Json.Serialization;
-using FirebaseAdmin;
-using FirebaseAdmin.Auth;
-using FirebaseAdminAuthentication.DependencyInjection.Extensions;
 using FluentValidation;
-using Google.Apis.Auth.OAuth2;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Mapster;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using UniDb.Application.Mediators.Commands;
-using UniDb.Domain.Services;
+using UniDb.Application.Mediators.Queries;
+using UniDb.Infrastructure.Services;
 using UniDb.Persistence;
 using UniDb.Persistence.Models;
-using UniDb.WebApi;
+using UniDb.Common;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers().AddOData(opt => opt.Select().Filter());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 builder.Services.AddTransient<IRequestHandler<CreateCourseCommand, Course>, CreateCourseCommandHandler>();
+builder.Services.AddTransient<IRequestHandler<GetCoursesQuery, List<CourseDto>>, GetCoursesQueryHandler>();
+builder.Services.AddTransient<IRequestHandler<GetCourseByIdQuery, Course>, GetCourseByIdQueryHandler>();
 builder.Services.AddTransient<IValidator<CreateCourseCommand>, CreateCourseCommandValidator>();
+builder.Services.AddTransient<IRequestHandler<EnrollmentCommand,ClassEnrollment>,EnrollmentCommandHandler>();
+builder.Services.AddTransient<IRequestHandler<TeacherCommand,TeacherPerCourse>,TeacherCommandHandler>();
 builder.Services.AddScoped<IFirebaseCreateAccountService, CreateAccountService>();
 builder.Services.AddScoped<IFirebaseLoginServer,FirebaseLoginServer>();
+var coursesconfig = new TypeAdapterConfig();
+coursesconfig.NewConfig<Course, CourseDto>()
+    .Map(dest => dest.Id, src => src.Id)
+    .Map(dest => dest.Name, src => src.Name)
+    .Map(dest => dest.MaxStudentsNumber, src => src.MaxStudentsNumber)
+    .Map(dest => dest.EnrolmentStartDate, src => src.EnrolmentDateRange.LowerBound)
+    .Map(dest => dest.EnrolmentEndDate, src => src.EnrolmentDateRange.UpperBound);
+   
+
+builder.Services.AddSingleton(coursesconfig);
+
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
+
+
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    options.JsonSerializerOptions.Converters.Add(new NpgsqlRangeDateOnlyConverter());
+    options.JsonSerializerOptions.Converters.Add(new DateRangeOnlyConverter());
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 });
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -43,11 +64,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateLifetime = true
         };
     });
-
-
-
-
-builder.Services.AddControllers().AddOData(opt => opt.Select().Filter());
 builder.Services.AddEntityFrameworkNpgsql()
     .AddDbContext<UniversityDbContext>(opt => opt
         .UseNpgsql(builder.Configuration.GetConnectionString("UniversityDb")));
@@ -59,6 +75,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGet("/", () => "Hello World!");
+
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -12,8 +12,9 @@ public class CreateCourseCommand : IRequest<Course>
     public string? Name { get; set; }
 
     public int? MaxStudentsNumber { get; set; }
-
-    public NpgsqlRange<DateOnly>? EnrolmentDateRange { get; set; }
+    
+    public string? Tenant { get; set; }
+    public NpgsqlRange<DateOnly> EnrolmentDateRange { get; set; }
 }
 
 public class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommand, Course>
@@ -35,15 +36,23 @@ public class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommand, C
         var validator = new CreateCourseCommandValidator();
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
         if (!validationResult.IsValid) throw new ValidationException(validationResult.Errors);
+        
+      /*  var schemaName = "public";
+        if (!string.IsNullOrEmpty(request.Tenant))
+        {
+            schemaName = $"tenant_{request.Tenant}";
+        }
+        _database.ChangeSchema(schemaName);*/
 
-        var course = new Course
+        var course = new Course 
         {
             Name = request.Name,
             MaxStudentsNumber = request.MaxStudentsNumber,
-            EnrolmentDateRange = request.EnrolmentDateRange
+            EnrolmentDateRange = request.EnrolmentDateRange,
         };
         try
         {
+            
             _database.Courses.Add(course);
             await _database.SaveChangesAsync(cancellationToken);
             return course;
@@ -61,7 +70,7 @@ public class CreateCourseCommandValidator : AbstractValidator<CreateCourseComman
     {
         RuleFor(x => x.Name).NotEmpty().MaximumLength(35);
         RuleFor(x => x.Name).NotEmpty();
-        RuleFor(x => x.MaxStudentsNumber).GreaterThan(0);
+        RuleFor(x => x.MaxStudentsNumber).GreaterThan(0); 
         //RuleFor(x => x.EnrolmentDateRange).NotNull().Must(x => x.LowerBound <= x.UpperBound);
     }
 }

@@ -8,7 +8,7 @@ public class User
 
     public long RoleId { get; set; }
 
-    public string KeycloakId { get; set; } = null!;
+    public string FirebaseId { get; set; } = null!;
 
     public string Email { get; set; } = null!;
 

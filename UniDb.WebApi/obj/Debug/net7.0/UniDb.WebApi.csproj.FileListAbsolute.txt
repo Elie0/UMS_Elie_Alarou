@@ -143,3 +143,9 @@ C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\Grpc.Net.Common
 C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\protobuf-net.dll
 C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\protobuf-net.Core.dll
 C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\System.Linq.Async.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\RabbitMQ.Client.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\UniDb.Common.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\UniDb.Common.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\Mapster.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\Mapster.Core.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.WebApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

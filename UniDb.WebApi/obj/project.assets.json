@@ -18,6 +18,19 @@
           }
         }
       },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "12.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Azure.Core/1.25.0": {
         "type": "package",
         "dependencies": {
@@ -422,6 +435,27 @@
           "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Mapster/7.4.0-pre06": {
+        "type": "package",
+        "dependencies": {
+          "Mapster.Core": "1.2.1-pre04"
+        },
+        "compile": {
+          "lib/net7.0/Mapster.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Mapster.dll": {}
+        }
+      },
+      "Mapster.Core/1.2.1-pre04": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Mapster.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Mapster.Core.dll": {}
         }
       },
       "MediatR/12.0.1": {
@@ -2521,6 +2555,23 @@
           }
         }
       },
+      "RabbitMQ.Client/6.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "7.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/6.5.0": {
         "type": "package",
         "dependencies": {
@@ -2752,7 +2803,7 @@
           }
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.5": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -3055,6 +3106,22 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "System.Threading.Channels/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Threading.Channels.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Threading.Channels.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
         "compile": {
@@ -3096,6 +3163,8 @@
           "FluentValidation": "11.5.1",
           "Google.Cloud.Firestore": "3.2.0",
           "Google.Protobuf": "3.22.1",
+          "Mapster": "7.4.0-pre06",
+          "Mapster.Core": "1.2.1-pre04",
           "MediatR": "12.0.1",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
@@ -3106,6 +3175,7 @@
           "Microsoft.Extensions.Logging.Console": "8.0.0-preview.2.23128.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
+          "RabbitMQ.Client": "6.5.0",
           "UniDb.Domain": "1.0.0",
           "UniDb.Infrastructure": "1.0.0",
           "protobuf-net": "3.2.16"
@@ -3115,6 +3185,26 @@
         },
         "runtime": {
           "bin/placeholder/UniDb.Application.dll": {}
+        }
+      },
+      "UniDb.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Mapster.Core": "1.2.1-pre04",
+          "Microsoft.EntityFrameworkCore": "8.0.0-preview.2.23128.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
+          "UniDb.Application": "1.0.0",
+          "UniDb.Persistence": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UniDb.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniDb.Common.dll": {}
         }
       },
       "UniDb.Domain/1.0.0": {
@@ -3141,9 +3231,13 @@
           "Google.Cloud.Firestore": "3.2.0",
           "Google.Protobuf": "3.22.1",
           "Microsoft.AspNet.OData": "7.6.5",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.OData": "8.0.12",
           "Microsoft.EntityFrameworkCore": "8.0.0-preview.2.23128.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
+          "RabbitMQ.Client": "6.5.0",
+          "System.IdentityModel.Tokens.Jwt": "6.24.0",
           "UniDb.Domain": "1.0.0",
           "UniDb.Persistence": "1.0.0",
           "protobuf-net": "3.2.16"
@@ -3187,6 +3281,20 @@
         "icon.png",
         "lib/netstandard2.1/AutoMapper.dll",
         "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.0": {
+      "sha512": "XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "Azure.Core/1.25.0": {
@@ -3676,6 +3784,34 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Mapster/7.4.0-pre06": {
+      "sha512": "+hpfk4vOonrr4VAZ3x6i93puZHy3SBKm39ffCq7d8qjNTir5a9cPyvIFiqqyLlnIFXZOblMWbJEegO4RE8DJyw==",
+      "type": "package",
+      "path": "mapster/7.4.0-pre06",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0/Mapster.dll",
+        "lib/net7.0/Mapster.dll",
+        "mapster.7.4.0-pre06.nupkg.sha512",
+        "mapster.nuspec"
+      ]
+    },
+    "Mapster.Core/1.2.1-pre04": {
+      "sha512": "en93KNBjIGorx2I9mEhTqBUOGb2ybMLdaZMXpwpnQVaWnERy38EoLtK9FDd8WT16IDaC0A4otmGuNI1Szlm6CQ==",
+      "type": "package",
+      "path": "mapster.core/1.2.1-pre04",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0/Mapster.Core.dll",
+        "lib/net7.0/Mapster.Core.dll",
+        "mapster.core.1.2.1-pre04.nupkg.sha512",
+        "mapster.core.nuspec"
       ]
     },
     "MediatR/12.0.1": {
@@ -5996,6 +6132,22 @@
         "protobuf-net.png"
       ]
     },
+    "RabbitMQ.Client/6.5.0": {
+      "sha512": "9hY5HiWPtCla1/l0WmXmLnqoX7iKE3neBQUWnetIJrRpOvTbO//XQfQDh++xgHCshL40Kv/6bR0HDkmJz46twg==",
+      "type": "package",
+      "path": "rabbitmq.client/6.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/RabbitMQ.Client.dll",
+        "lib/net461/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.6.5.0.nupkg.sha512",
+        "rabbitmq.client.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore.Swagger/6.5.0": {
       "sha512": "XWmCmqyFmoItXKFsQSwQbEAsjDKcxlNf1l+/Ki42hcb6LjKL8m5Db69OTvz5vLonMSRntYO1XLqz0OP+n3vKnA==",
       "type": "package",
@@ -6438,10 +6590,10 @@
         "system.linq.async.nuspec"
       ]
     },
-    "System.Memory/4.5.4": {
-      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
-      "path": "system.memory/4.5.4",
+      "path": "system.memory/4.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6455,7 +6607,7 @@
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.4.5.5.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -7191,6 +7343,35 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Threading.Channels/7.0.0": {
+      "sha512": "qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
+      "type": "package",
+      "path": "system.threading.channels/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Threading.Channels.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Threading.Channels.targets",
+        "lib/net462/System.Threading.Channels.dll",
+        "lib/net462/System.Threading.Channels.xml",
+        "lib/net6.0/System.Threading.Channels.dll",
+        "lib/net6.0/System.Threading.Channels.xml",
+        "lib/net7.0/System.Threading.Channels.dll",
+        "lib/net7.0/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "lib/netstandard2.1/System.Threading.Channels.dll",
+        "lib/netstandard2.1/System.Threading.Channels.xml",
+        "system.threading.channels.7.0.0.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Threading.Tasks.Extensions/4.5.4": {
       "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
@@ -7260,6 +7441,11 @@
       "path": "../UniDb.Application/UniDb.Application.csproj",
       "msbuildProject": "../UniDb.Application/UniDb.Application.csproj"
     },
+    "UniDb.Common/1.0.0": {
+      "type": "project",
+      "path": "../UniDb.Common/UniDb.Common.csproj",
+      "msbuildProject": "../UniDb.Common/UniDb.Common.csproj"
+    },
     "UniDb.Domain/1.0.0": {
       "type": "project",
       "path": "../UniDb.Domain/UniDb.Domain.csproj",
@@ -7282,6 +7468,7 @@
       "FirebaseAdminAuthentication.DependencyInjection >= 1.1.0",
       "FirebaseAuthentication.net >= 4.0.2",
       "Google.Apis.Auth.AspNetCore3 >= 1.60.0",
+      "Mapster.Core >= 1.2.1-pre04",
       "MediatR >= 12.0.1",
       "Microsoft.AspNet.OData >= 7.6.5",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.4",
@@ -7297,6 +7484,7 @@
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0",
       "System.Configuration.ConfigurationManager >= 8.0.0-preview.2.23128.3",
       "UniDb.Application >= 1.0.0",
+      "UniDb.Common >= 1.0.0",
       "UniDb.Infrastructure >= 1.0.0"
     ]
   },
@@ -7330,6 +7518,9 @@
             "C:\\Users\\eliea\\RiderProjects\\UniDb\\UniDb.Application\\UniDb.Application.csproj": {
               "projectPath": "C:\\Users\\eliea\\RiderProjects\\UniDb\\UniDb.Application\\UniDb.Application.csproj"
             },
+            "C:\\Users\\eliea\\RiderProjects\\UniDb\\UniDb.Common\\UniDb.Common.csproj": {
+              "projectPath": "C:\\Users\\eliea\\RiderProjects\\UniDb\\UniDb.Common\\UniDb.Common.csproj"
+            },
             "C:\\Users\\eliea\\RiderProjects\\UniDb\\UniDb.Infrastructure\\UniDb.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\eliea\\RiderProjects\\UniDb\\UniDb.Infrastructure\\UniDb.Infrastructure.csproj"
             }
@@ -7361,6 +7552,10 @@
           "Google.Apis.Auth.AspNetCore3": {
             "target": "Package",
             "version": "[1.60.0, )"
+          },
+          "Mapster.Core": {
+            "target": "Package",
+            "version": "[1.2.1-pre04, )"
           },
           "MediatR": {
             "target": "Package",

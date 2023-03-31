@@ -1,10 +1,9 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 using NpgsqlTypes;
+namespace UniDb.Common;
 
-namespace UniDb.WebApi;
-
-public class NpgsqlRangeDateOnlyConverter : JsonConverter<NpgsqlRange<DateOnly>>
+public class DateRangeOnlyConverter: JsonConverter<NpgsqlRange<DateOnly>>
 {
     public override NpgsqlRange<DateOnly> Read(ref Utf8JsonReader reader, Type typeToConvert,
         JsonSerializerOptions options)

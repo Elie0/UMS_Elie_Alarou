@@ -2,8 +2,7 @@
 using Firebase.Auth.Providers;
 using Firebase.Auth.Repository;
 
-
-namespace UniDb.Domain;
+namespace UniDb.Infrastructure;
 public static class FirebaseConfig
 {
     private static FirebaseAuthClient _auth;

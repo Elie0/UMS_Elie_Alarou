@@ -12,3 +12,12 @@ C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\obj\Debug\net7.0\UniDb.Common.pd
 C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\obj\Debug\net7.0\ref\UniDb.Common.dll
 C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Common.runtimeconfig.json
 C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\obj\Debug\net7.0\UniDb.Common.genruntimeconfig.cache
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Application.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Domain.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Infrastructure.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Persistence.dll
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Application.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Persistence.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Domain.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\bin\Debug\net7.0\UniDb.Infrastructure.pdb
+C:\Users\eliea\RiderProjects\UniDb\UniDb.Common\obj\Debug\net7.0\UniDb.Common.csproj.CopyComplete

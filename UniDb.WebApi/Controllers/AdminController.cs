@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UniDb.Application.Mediators.Commands;
-using UniDb.Domain.Services;
+using UniDb.Infrastructure.Services;
 using UniDb.Persistence.Models;
 
 namespace UniDb.WebApi.Controllers;
@@ -20,7 +20,7 @@ public class AdminController : ControllerBase
         _login = login;
     }
     
-    [HttpPost]
+    [HttpPost("CreateCourse")]
     [Authorize(Roles = "admin")]
     public async Task<ActionResult<Course>> CreateCourse(CreateCourseCommand command)
     {

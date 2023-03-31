@@ -139,7 +139,7 @@ public partial class PostgresContext : DbContext
 
             entity.HasIndex(e => e.Id, "users_\"id\"_uindex").IsUnique();
 
-            entity.HasIndex(e => e.KeycloakId, "users_\"keycloackid\"_uindex").IsUnique();
+            entity.HasIndex(e => e.FirebaseId, "users_\"Firebaseid\"_uindex").IsUnique();
 
             entity.Property(e => e.Id).HasDefaultValueSql("nextval('\"Users_id_seq\"'::regclass)");
             entity.Property(e => e.Name).HasColumnType("character varying");

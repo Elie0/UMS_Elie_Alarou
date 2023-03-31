@@ -11,6 +11,7 @@
         <PackageReference Include="FirebaseAdminAuthentication.DependencyInjection" Version="1.1.0" />
         <PackageReference Include="FirebaseAuthentication.net" Version="4.0.2" />
         <PackageReference Include="Google.Apis.Auth.AspNetCore3" Version="1.60.0" />
+        <PackageReference Include="Mapster.Core" Version="1.2.1-pre04" />
         <PackageReference Include="MediatR" Version="12.0.1" />
         <PackageReference Include="Microsoft.AspNet.OData" Version="7.6.5" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.4" />
@@ -32,6 +33,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\UniDb.Application\UniDb.Application.csproj" />
+        <ProjectReference Include="..\UniDb.Common\UniDb.Common.csproj" />
         <ProjectReference Include="..\UniDb.Infrastructure\UniDb.Infrastructure.csproj" />
     </ItemGroup>
 

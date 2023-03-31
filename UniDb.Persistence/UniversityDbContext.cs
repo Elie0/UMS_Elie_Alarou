@@ -10,6 +10,11 @@ public class UniversityDbContext : DbContext
     }
 
     public DbSet<Course> Courses { get; set; }
+    public DbSet<Role> Roles { get; set; }
+    
+    public DbSet<User> Users { get; set; }
+    public DbSet<TeacherPerCourse> TeacherPerCourse { get; set; }
+    public DbSet<ClassEnrollment>  ClassEnrollment  { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

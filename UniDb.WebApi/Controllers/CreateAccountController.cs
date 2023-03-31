@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniDb.Domain.Services;
-
+using UniDb.Infrastructure.Services;
 namespace UniDb.WebApi.Controllers;
-
 public class AuthController : ControllerBase
 {
     private readonly IFirebaseCreateAccountService _createAccountService;
@@ -13,9 +11,9 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(string email, string password,string role)
+    public async Task<IActionResult> Register(string email, string password,string role,string name)
     {
-        var result = await _createAccountService.RegisterAsync(email, password, role);
+        var result = await _createAccountService.RegisterAsync(email, password, role,name);
 
         if (result == "Account Succesfully Created")
         {
